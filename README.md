@@ -1,6 +1,15 @@
 # Overview
 
-Sample application to test project structure and configuration.
+Sample application to test project structure and configuration. 
+
+This project has two parts, a public site where users can upload files and an admin dashboard where an authenticated user can accept or reject uploaded files.
+
+Client side
+    - React
+    - Mox
+Server
+    - Deno
+    - MongoDB
 
 # Requirements
 
@@ -9,7 +18,7 @@ Docker
 
 # Setup
 
-1. Clone project
+1. Clone project `$ git clone https://github.com/minustime/sample-react-project.git`
 2. Install client-side dependencies `$ cd src/client && npm install`
 
 # Usage
@@ -86,3 +95,8 @@ To work on the client side
 │   └── uploads
 └── tsconfig.json
 ```
+
+
+## Notes
+
+- For larger projects, `client` and `server` should live in separate repos.

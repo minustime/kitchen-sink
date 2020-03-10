@@ -1,0 +1,17 @@
+{
+  "name": "sample-project-server",
+  "version": "1.0.0",
+  "description": "Sample application to test project structure and configuration.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Vic <vic@minustime.com>",
+  "license": "ISC"
+}
