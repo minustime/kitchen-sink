@@ -1,40 +1,37 @@
 # Overview
 
-Sample application to test project structure and configuration. 
-
-This project has two parts, a public site where users can upload files and an admin dashboard where an authenticated user can accept or reject uploaded files.
+Personal project to experiment with multiple technologies and test setup, configuration and security. This project has two parts: a public side where users provide content and an admin dashboard where authenticated users manage user provided content.
 
 # Requirements
 
-- Node 12.x
-- Docker
+- Node 12
+- Docker 19
 
 # Setup
 
-To work on the client side
+The client side uses React as the view layer and Mobx to manage state. Code that retrieves and transforms data is written in TypeScript. Sass is used for styling and Webpack for bundling. API responses are mocked on the client-side using Mirage JS (see `mocks` directory.) To get started:
 
 1. `$ cd src/client`  
 2. `$ npm install`
 3. `$ npm run dev`
-4. Browse to [http://localhost:3000](http://localhost:3000)
+4. Browse to [http://localhost:3000/admin/login](http://localhost:3000/admin/login)
 
-To work on the server side
+The server side runs on Express, all data is stored in MongoDB. To get started on the server side:
 
 1. `$ cd src/server`  
 2. `$ npm install`
 3. `$ node server/server.js`
 4. Browse to [http://localhost:8000/api](http://localhost:8000/api)
 
-# Dockerized
+# Testing
 
-To run the complete application.
+The application is bundled using Docker and it can be brought up along its supporting services (Nginx and MongoDB) to simulate a production environment. To run the dockerized application:
 
-1. Create an `.env` file by copying `.env.sample`, modify contents
-2. Run project from within `docker` container `$ docker-compose up`
-3. Browse to [http://localhost:8080/login](http://localhost:8080/login)
+1. Create an `.env` file by copying `.env.sample`, modify its contents to match your preferences
+2. Run the project from within `docker` container `$ docker-compose up`
+3. Browse to [http://localhost:8080/admin/login](http://localhost:8080/admin/login)
 
 # Project structure
-
 
 ```
 .
@@ -47,7 +44,7 @@ To run the complete application.
 │   ├── package.json
 │   ├── public
 │   │   ├── admin.html
-│   │   └── dashboard.html
+│   │   └── guests.html
 │   ├── src
 │   │   ├── components
 │   │   │   ├── Button
@@ -93,3 +90,8 @@ To run the complete application.
     ├── server.js
     └── uploads
 ```
+
+## Notes
+
+_This is an ongoing and incomplete project, do not use it in production before observing security practices_
+

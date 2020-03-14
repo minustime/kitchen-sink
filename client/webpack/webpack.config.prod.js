@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     vendor: ['react', 'react-dom', 'react-router', 'mobx', 'mobx-react'],
     admin: './src/containers/Admin/index.jsx',
-    dashboard: './src/containers/Dashboard/index.jsx',
+    guests: './src/containers/Dashboard/index.jsx',
   },
   output: {
     path: path.resolve(process.cwd(), 'dist'),
