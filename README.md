@@ -40,6 +40,9 @@ To run the complete application.
 .
 ├── README.md
 ├── client
+│   ├── dist
+│   ├── mocks
+│   │   └── server.js
 │   ├── package-lock.json
 │   ├── package.json
 │   ├── public
@@ -55,21 +58,26 @@ To run the complete application.
 │   │   │       └── index.jsx
 │   │   ├── containers
 │   │   │   ├── Admin
+│   │   │   │   ├── App.js
+│   │   │   │   ├── Login
+│   │   │   │   │   └── index.jsx
+│   │   │   │   ├── Uploads
+│   │   │   │   │   └── index.jsx
 │   │   │   │   └── index.jsx
-│   │   │   └── Dashboard
-│   │   │       ├── index.jsx
-│   │   │       └── screens
-│   │   │           ├── Login
-│   │   │           │   └── index.jsx
-│   │   │           └── Manage
-│   │   │               └── index.jsx
+│   │   │   └── Guests
+│   │   │       ├── App.js
+│   │   │       └── index.jsx
+│   │   ├── services
+│   │   │   └── Uploads.ts
 │   │   └── stores
+│   │       └── UploadStore.ts
 │   ├── tsconfig.json
 │   └── webpack
 │       ├── webpack.config.dev.js
 │       └── webpack.config.prod.js
 ├── docker
 │   ├── Dockerfile
+│   ├── docker-compose.dev.yml
 │   ├── docker-compose.yml
 │   ├── mongo
 │   │   └── mongo.conf

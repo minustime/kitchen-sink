@@ -5,9 +5,9 @@ const publicPath = `http://localhost:${port}/dist/`;
 module.exports = {
   mode: 'development',
   entry: {
-    vendor: ['react', 'react-dom'],
+    vendor: ['react', 'react-dom', 'mobx', 'mobx-react'],
     admin: './src/containers/Admin/index.jsx',
-    dashboard: './src/containers/Dashboard/index.jsx',
+    guests: './src/containers/Guests/index.jsx',
   },
   output: {
     path: path.resolve(process.cwd(), 'dist'),
@@ -54,13 +54,14 @@ module.exports = {
     },
   },
   devServer: {
+    hot: false,
     port,
     publicPath,
     contentBase: ['public', 'dist'],
     historyApiFallback: {
       rewrites: [
-        { from: /^(\/.*)*$/, to: 'dashboard.html' },
         { from: /^\/admin(\/.*)*$/, to: 'admin.html' },
+        { from: /^(\/.*)*$/, to: 'guests.html' },
       ],
     },
   },

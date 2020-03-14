@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: 'production',
   entry: {
-    vendor: ['react', 'react-dom'],
+    vendor: ['react', 'react-dom', 'react-router', 'mobx', 'mobx-react'],
     admin: './src/containers/Admin/index.jsx',
     dashboard: './src/containers/Dashboard/index.jsx',
   },
@@ -30,6 +30,10 @@ module.exports = {
           { loader: require.resolve('css-loader') },
           { loader: require.resolve('sass-loader') },
         ],
+      },
+      {
+        test: [/node_modules\/miragejs\//],
+        use: 'null-loader',
       },
       {
         exclude: [/\.ts$/, /\.jsx$/, /\.scss$/, /\.js$/, /\.html$/, /\.json$/],
