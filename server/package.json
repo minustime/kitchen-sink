@@ -4,7 +4,7 @@
   "description": "Sample application to test project structure and configuration.",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.3"
   },
   "devDependencies": {},
